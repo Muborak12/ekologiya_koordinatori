@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+
+<html lang="uz">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ekologiya 2.0: Sayyorani Qutqarish — Maktabdan Boshlanadi</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Outfit:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Outfit"', 'sans-serif'],
+          },
+          colors: {
+            matcha: '#F6FAF5',
+            spearmint: '#E3F4E9',
+            celadon: '#38A169',
+            emeraldDark: '#1B4332',
+            sage: '#A8D5BA',
+            limeGlow: '#CCFF00',
+            dew: '#FCFDF9',
+          },
+          boxShadow: {
+            'glass': '0 20px 50px rgba(27, 67, 50, 0.08), 0 4px 12px rgba(56, 161, 105, 0.05)',
+            'glass-hover': '0 25px 60px rgba(27, 67, 50, 0.14), 0 10px 24px rgba(56, 161, 105, 0.1)',
+            'glow-lime': '0 0 25px rgba(204, 255, 0, 0.45)',
+            'glow-green': '0 0 30px rgba(56, 161, 105, 0.35)',
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #F6FAF5;
+      color: #1B4332;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+    .font-display {
+      font-family: 'Outfit', sans-serif;
+    }
+    .glass-panel {
+      background: rgba(255, 255, 255, 0.65);
+      backdrop-filter: blur(28px);
+      -webkit-backdrop-filter: blur(28px);
+      border: 1px solid rgba(168, 213, 186, 0.45);
+    }
+    .glass-panel-subtle {
+      background: rgba(255, 255, 255, 0.45);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(168, 213, 186, 0.3);
+    }
+    .glass-panel-dark {
+      background: rgba(27, 67, 50, 0.88);
+      backdrop-filter: blur(30px);
+      -webkit-backdrop-filter: blur(30px);
+      border: 1px solid rgba(56, 161, 105, 0.4);
+    }
+    .ambient-blob-1 {
+      position: absolute;
+      width: 650px;
+      height: 650px;
+      background: radial-gradient(circle, rgba(168, 213, 186, 0.4) 0%, rgba(227, 244, 233, 0) 70%);
+      filter: blur(60px);
+      pointer-events: none;
+      z-index: 0;
+      animation: floatSlow 18s ease-in-out infinite alternate;
+    }
+    .ambient-blob-2 {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(204, 255, 0, 0.18) 0%, rgba(246, 250, 245, 0) 70%);
+      filter: blur(70px);
+      pointer-events: none;
+      z-index: 0;
+      animation: floatReverse 14s ease-in-out infinite alternate;
+    }
+    @keyframes floatSlow {
+      0% { transform: translate(0px, 0px) scale(1); }
+      100% { transform: translate(80px, 60px) scale(1.12); }
+    }
+    @keyframes floatReverse {
+      0% { transform: translate(0px, 0px) scale(1.05); }
+      100% { transform: translate(-60px, -40px) scale(0.95); }
+    }
+    .slide-section {
+      min-height: calc(100vh - 80px);
+      display: none;
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1), transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .slide-section.active {
+      display: flex;
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .magnetic-card {
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .magnetic-card:hover {
+      transform: translateY(-6px) scale(1.015);
+      border-color: rgba(56, 161, 105, 0.7);
+      box-shadow: 0 24px 50px rgba(27, 67, 50, 0.12);
+    }
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F6FAF5;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #A8D5BA;
+      border-radius: 9999px;
+    }
+  </style>
+</head>
+<body class="relative min-h-screen text-[#1B4332] selection:bg-[#CCFF00] selection:text-[#1B4332] flex flex-col justify-between">
+<!-- Ambient Organic Light Orbs -->
+<div class="ambient-blob-1 top-[-100px] left-[-150px]"></div>
+<div class="ambient-blob-2 bottom-[10%] right-[-100px]"></div>
+<div class="ambient-blob-1 top-[40%] right-[15%] w-[450px] h-[450px] opacity-60"></div>
+<!-- PERSISTENT TOP NAVIGATION BAR (GLASSMORPHISM) -->
+<header class="sticky top-0 z-50 px-6 py-4">
+<div class="max-w-7xl mx-auto glass-panel rounded-2xl px-6 py-3.5 flex items-center justify-between shadow-glass">
+<!-- Brand & Presenter -->
+<div class="flex items-center gap-3.5">
+<div class="relative w-10 h-10 rounded-xl overflow-hidden shadow-md border border-celadon/30 bg-white p-0.5 flex items-center justify-center">
+<img alt="Bektemir Yashil Hub" class="w-full h-full object-cover rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCV-N0VJ1Hb6vGugUin_zlNfH4lFKbTfNf-se5ojphIXafUhbgs4ps8WI5u73T_cx_62F1Yr_tzjNT-9YdFFSqNvYGHe_VptK8JAHEzl6ZUWmVYRpY8yy6UkFTJyRU_vp9nZ7YZ8p7l5MMvtPDPeu7TDpr9yIibc7U1uSumDgYc5VO157_9EXoKl8oNAAN_51PpsSaKo4xvW2cIz59ZXPGonkZvpCvrNIMo1H0Qfehx83rTHSAHwTpwQ"/>
+<div class="absolute inset-0 ring-1 ring-inset ring-celadon/20 rounded-xl"></div>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-display font-black text-lg tracking-tight text-emeraldDark">BEKTEMIR <span class="text-celadon font-medium">YASHIL HUB</span></span>
+<span class="px-2 py-0.5 text-[10px] font-bold uppercase tracking-widest bg-limeGlow text-emeraldDark rounded-full shadow-sm">Eco 2.0</span>
+</div>
+<p class="text-xs text-emeraldDark/70 font-medium">Abdukarimova Muborak • 348-maktab Yashil Harakat Lideri</p>
+</div>
+</div>
+<!-- Slide Indicator Tabs & Progress -->
+<div class="hidden lg:flex items-center gap-1.5 bg-emeraldDark/5 p-1.5 rounded-xl border border-sage/20">
+<button class="nav-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition-all bg-white text-emeraldDark shadow-sm" data-slide="0" onclick="goToSlide(0)">1. Hero Cover</button>
+<button class="nav-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition-all text-emeraldDark/70 hover:text-emeraldDark" data-slide="1" onclick="goToSlide(1)">2. 348-Lab</button>
+<button class="nav-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition-all text-emeraldDark/70 hover:text-emeraldDark" data-slide="2" onclick="goToSlide(2)">3. Bektemir Reja</button>
+<button class="nav-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition-all text-emeraldDark/70 hover:text-emeraldDark" data-slide="3" onclick="goToSlide(3)">4. Eco-Chic (Qizlar)</button>
+<button class="nav-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition-all text-emeraldDark/70 hover:text-emeraldDark" data-slide="4" onclick="goToSlide(4)">5. GreenTech (O'g'illar)</button>
+<button class="nav-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition-all text-emeraldDark/70 hover:text-emeraldDark" data-slide="5" onclick="goToSlide(5)">6. Yashil Tarmoq</button>
+<button class="nav-tab px-3 py-1.5 rounded-lg text-xs font-semibold transition-all text-emeraldDark/70 hover:text-emeraldDark" data-slide="6" onclick="goToSlide(6)">7. Manifest</button>
+</div>
+<!-- Quick Actions & Fullscreen View -->
+<div class="flex items-center gap-3">
+<div class="hidden sm:flex flex-col items-end">
+<span class="text-[11px] font-bold uppercase tracking-wider text-celadon flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-limeGlow animate-ping inline-block"></span>
+            Jonli Taqdimot
+          </span>
+<span class="text-xs font-bold text-emeraldDark" id="slideCounterText">Slayd 01 / 07</span>
+</div>
+<div class="flex items-center gap-1 bg-white/80 p-1 rounded-xl border border-sage/40 shadow-sm">
+<button class="w-8 h-8 flex items-center justify-center rounded-lg text-emeraldDark hover:bg-emeraldDark/10 transition-colors" onclick="prevSlide()" title="Oldingi slayd">
+<i class="fa-solid fa-chevron-left text-xs"></i>
+</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg bg-emeraldDark text-white hover:bg-emeraldDark/90 transition-colors" onclick="nextSlide()" title="Keyingi slayd">
+<i class="fa-solid fa-chevron-right text-xs"></i>
+</button>
+</div>
+</div>
+</div>
+<!-- Fluid Growth Progress Bar -->
+<div class="max-w-7xl mx-auto mt-2 px-1">
+<div class="w-full bg-emeraldDark/10 h-1.5 rounded-full overflow-hidden backdrop-blur-sm">
+<div class="h-full bg-gradient-to-r from-celadon via-emeraldDark to-limeGlow transition-all duration-500 rounded-full" id="growthProgressBar" style="width: 14.28%;"></div>
+</div>
+</div>
+</header>
+<!-- MAIN SLIDES CONTAINER -->
+<main class="relative z-10 flex-1 max-w-7xl w-full mx-auto px-6 py-4 flex flex-col justify-center">
+<!-- SLIDE 1: HERO COVER -->
+<section class="slide-section active flex-col justify-center" id="slide-0">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<!-- Left Content (Editorial Magazine Layout) -->
+<div class="lg:col-span-7 space-y-6">
+<!-- Glowing Pill -->
+<div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full glass-panel shadow-sm border border-celadon/30">
+<span class="flex h-2.5 w-2.5 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-limeGlow opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-celadon"></span>
+</span>
+<span class="text-xs font-bold uppercase tracking-widest text-emeraldDark">Bektemir Tumani | Yashil Ekologiya Koordinatori</span>
+</div>
+<!-- Main Title -->
+<div class="space-y-3">
+<h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.08] tracking-tight text-emeraldDark">
+              Ekologiya 2.0: <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-emeraldDark via-celadon to-emeraldDark">
+                Sayyorani Qutqarish —
+              </span><br/>
+<span class="italic font-serif font-normal text-celadon">Maktabdan Boshlanadi.</span>
+</h1>
+<p class="text-lg sm:text-xl text-emeraldDark/80 font-medium max-w-xl leading-relaxed">
+              Bir martalik aksiyalardan — o‘zini o‘zi ta’minlovchi, yoshlar boshqaruvidagi barqaror yashil ekotizimga transformatsiya.
+            </p>
+</div>
+<!-- Presenter Luxury Glass Badge -->
+<div class="flex items-center gap-4 p-4 rounded-2xl glass-panel border border-sage/40 shadow-sm max-w-md">
+<div class="w-12 h-12 rounded-xl bg-gradient-to-br from-celadon to-emeraldDark flex items-center justify-center text-white shadow-md font-display font-black text-xl">
+              AM
+            </div>
+<div>
+<div class="font-display font-bold text-base text-emeraldDark">Abdukarimova Muborak</div>
+<div class="text-xs text-celadon font-semibold uppercase tracking-wider">348-maktab Yashil Harakat Lideri</div>
+</div>
+<div class="ml-auto">
+<span class="px-2.5 py-1 text-[11px] font-bold bg-spearmint text-emeraldDark rounded-lg border border-sage/40">2025 Reja</span>
+</div>
+</div>
+<!-- Central Quote (Floating Kinetic Glass Box) -->
+<div class="relative p-6 rounded-2xl glass-panel border-l-4 border-l-celadon shadow-glass max-w-2xl bg-white/70">
+<div class="absolute -top-3 right-6 px-3 py-0.5 rounded-full bg-limeGlow text-emeraldDark text-[11px] font-black uppercase tracking-wider shadow-sm">
+              Falsafiy Vizion
+            </div>
+<p class="text-lg sm:text-xl font-display italic font-semibold text-emeraldDark leading-snug">
+              «Biz tabiatni shunchaki asramaymiz — biz tabiatning ajralmas bir bo‘lagi sifatida yashashni qayta o‘rganamiz.»
+            </p>
+<div class="mt-2 text-xs font-bold text-emeraldDark/60 flex items-center gap-2">
+<span class="w-4 h-[1.5px] bg-celadon inline-block"></span>
+              Bektemir Yosh Eko-Harakati Bosh Tamoyili
+            </div>
+</div>
+<!-- Slide Controls Prompt -->
+<div class="pt-2 flex items-center gap-4">
+<button class="px-6 py-3.5 rounded-xl bg-emeraldDark text-white font-display font-bold text-sm tracking-wide shadow-glow-green hover:bg-celadon hover:text-white transition-all flex items-center gap-3" onclick="nextSlide()">
+<span>Taqdimotni Boshlash</span>
+<i class="fa-solid fa-arrow-right text-xs"></i>
+</button>
+<div class="text-xs text-emeraldDark/60 font-semibold flex items-center gap-1.5">
+<i class="fa-solid fa-keyboard text-celadon"></i>
+<span>Klaviatura strelkalari bilan boshqarish mumkin</span>
+</div>
+</div>
+</div>
+<!-- Right 3D Visual Box: Seedling inside Frosted Glass Cube -->
+<div class="lg:col-span-5 relative flex items-center justify-center">
+<div class="relative w-full aspect-square max-w-[480px] rounded-3xl glass-panel p-3 shadow-glass border border-sage/40 flex flex-col overflow-hidden">
+<!-- 3D Tag Header -->
+<div class="flex items-center justify-between px-3 py-2 z-20">
+<span class="text-xs font-bold uppercase tracking-wider text-celadon flex items-center gap-1.5">
+<i class="fa-solid fa-cube"></i> Interaktiv 3D Shisha Kub
+              </span>
+<span class="text-[11px] font-medium text-emeraldDark/60 bg-emeraldDark/5 px-2 py-0.5 rounded-md">
+                Kursor bilan aylantiring
+              </span>
+</div>
+<!-- Three.js Canvas Container -->
+<div class="relative flex-1 w-full rounded-2xl overflow-hidden bg-gradient-to-b from-white/40 to-spearmint/30 flex items-center justify-center">
+<!-- STITCH_THREEJS_START:ANIMATION_2 class="absolute inset-0 w-full h-full bg-transparent" -->
+<div class="absolute inset-0 w-full h-full bg-transparent" style="display:block;">
+<script src="https://ajax.googleapis.com/ajax/libs/threejs/r125/three.min.js"></script>
+<div id="threejs-container-ANIMATION_2" style="width:100%;height:100%"></div>
+<script>
+(function() {
+  const container = document.getElementById('threejs-container-ANIMATION_2');
+  const devicePixelRatio = window.devicePixelRatio || 1;
+  const width = container.clientWidth || window.innerWidth;
+const height = container.clientHeight || window.innerHeight;
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 100);
+camera.position.set(0, 1.2, 4.2);
+
+const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true, powerPreference: "high-performance" });
+renderer.setSize(width, height);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+container.appendChild(renderer.domElement);
+
+// Lighting
+const ambientLight = new THREE.AmbientLight(0xffffff, 1.2);
+scene.add(ambientLight);
+
+const pointLight1 = new THREE.PointLight(0x38a169, 3, 10);
+pointLight1.position.set(2, 3, 2);
+scene.add(pointLight1);
+
+const pointLight2 = new THREE.PointLight(0xccff00, 2.5, 10);
+pointLight2.position.set(-2, -1, 1);
+scene.add(pointLight2);
+
+const dirLight = new THREE.DirectionalLight(0xa8d5ba, 1.8);
+dirLight.position.set(0, 4, 3);
+scene.add(dirLight);
+
+// Group to rotate
+const rootGroup = new THREE.Group();
+scene.add(rootGroup);
+
+// Glass Cube (Translucent outer box)
+const cubeGeo = new THREE.BoxGeometry(1.9, 1.9, 1.9);
+const cubeMat = new THREE.MeshPhysicalMaterial({
+  color: 0xe8ffef,
+  transmission: 0.85,
+  opacity: 0.85,
+  transparent: true,
+  roughness: 0.1,
+  ior: 1.45,
+  reflectivity: 0.6,
+  clearcoat: 1.0,
+  clearcoatRoughness: 0.1,
+  side: THREE.DoubleSide
+});
+const glassCube = new THREE.Mesh(cubeGeo, cubeMat);
+rootGroup.add(glassCube);
+
+// Glowing Cube Wireframe edges
+const edgesGeo = new THREE.EdgesGeometry(cubeGeo);
+const edgesMat = new THREE.LineBasicMaterial({ color: 0x38a169, transparent: true, opacity: 0.6, linewidth: 2 });
+const edgesLine = new THREE.LineSegments(edgesGeo, edgesMat);
+rootGroup.add(edgesLine);
+
+// Plant Stem inside cube
+const curve = new THREE.CatmullRomCurve3([
+  new THREE.Vector3(0, -0.85, 0),
+  new THREE.Vector3(0.08, -0.4, 0.05),
+  new THREE.Vector3(-0.05, 0.0, -0.05),
+  new THREE.Vector3(0.05, 0.45, 0.08),
+  new THREE.Vector3(0, 0.75, 0)
+]);
+const stemGeo = new THREE.TubeGeometry(curve, 32, 0.035, 12, false);
+const stemMat = new THREE.MeshStandardMaterial({
+  color: 0x2d6a4f,
+  roughness: 0.3,
+  metalness: 0.1
+});
+const stemMesh = new THREE.Mesh(stemGeo, stemMat);
+rootGroup.add(stemMesh);
+
+// Leaves
+function createLeaf(scaleX, scaleY, rotX, rotY, rotZ, posY, posX) {
+  const leafShape = new THREE.Shape();
+  leafShape.moveTo(0, 0);
+  leafShape.bezierCurveTo(0.2, 0.15, 0.25, 0.5, 0, 0.8);
+  leafShape.bezierCurveTo(-0.25, 0.5, -0.2, 0.15, 0, 0);
+
+  const extrudeSettings = { depth: 0.015, bevelEnabled: true, bevelSegments: 3, steps: 1, bevelSize: 0.01, bevelThickness: 0.01 };
+  const leafGeo = new THREE.ExtrudeGeometry(leafShape, extrudeSettings);
+  const leafMat = new THREE.MeshStandardMaterial({
+    color: 0x38a169,
+    emissive: 0x1b4332,
+    emissiveIntensity: 0.3,
+    roughness: 0.25,
+    metalness: 0.1,
+    side: THREE.DoubleSide
+  });
+  const leaf = new THREE.Mesh(leafGeo, leafMat);
+  leaf.scale.set(scaleX, scaleY, scaleX);
+  leaf.rotation.set(rotX, rotY, rotZ);
+  leaf.position.set(posX, posY, 0);
+  return leaf;
+}
+
+const leaf1 = createLeaf(0.55, 0.55, 0.3, 0.5, -0.6, -0.1, 0.02);
+const leaf2 = createLeaf(0.5, 0.5, -0.2, -0.7, 0.8, 0.15, -0.02);
+const leaf3 = createLeaf(0.4, 0.4, 0.4, 1.2, -0.9, 0.4, 0.04);
+const leaf4 = createLeaf(0.35, 0.35, -0.4, -1.0, 0.7, 0.55, -0.01);
+const leafTop = createLeaf(0.3, 0.35, 0.1, 0.2, 0.1, 0.72, 0);
+
+rootGroup.add(leaf1, leaf2, leaf3, leaf4, leafTop);
+
+// Floating Bioluminescent Spores / Particles inside & around cube
+const particleCount = 45;
+const pGeo = new THREE.BufferGeometry();
+const pPos = new Float32Array(particleCount * 3);
+for (let i = 0; i < particleCount * 3; i += 3) {
+  pPos[i] = (Math.random() - 0.5) * 1.6;
+  pPos[i + 1] = (Math.random() - 0.5) * 1.6;
+  pPos[i + 2] = (Math.random() - 0.5) * 1.6;
+}
+pGeo.setAttribute('position', new THREE.BufferAttribute(pPos, 3));
+const pMat = new THREE.PointsMaterial({
+  color: 0xccff00,
+  size: 0.045,
+  transparent: true,
+  opacity: 0.85,
+  blending: THREE.AdditiveBlending
+});
+const particles = new THREE.Points(pGeo, pMat);
+rootGroup.add(particles);
+
+// Substrate / Soil crystal at bottom
+const soilGeo = new THREE.CylinderGeometry(0.35, 0.45, 0.15, 16);
+const soilMat = new THREE.MeshStandardMaterial({
+  color: 0x1b4332,
+  roughness: 0.6
+});
+const soil = new THREE.Mesh(soilGeo, soilMat);
+soil.position.y = -0.85;
+rootGroup.add(soil);
+
+// Mouse interactive rotation
+let targetRotX = 0.2;
+let targetRotY = 0.4;
+let mouseX = 0;
+let mouseY = 0;
+
+window.addEventListener('mousemove', (e) => {
+  const rect = container.getBoundingClientRect();
+  mouseX = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+  mouseY = -(((e.clientY - rect.top) / rect.height) * 2 - 1);
+});
+
+// Resize handler
+window.addEventListener('resize', () => {
+  const newW = container.clientWidth || window.innerWidth;
+  const newH = container.clientHeight || window.innerHeight;
+  camera.aspect = newW / newH;
+  camera.updateProjectionMatrix();
+  renderer.setSize(newW, newH);
+});
+
+// Animation loop
+let clock = new THREE.Clock();
+function animate() {
+  requestAnimationFrame(animate);
+  const time = clock.getElapsedTime();
+
+  targetRotY = 0.3 * Math.sin(time * 0.4) + mouseX * 0.6;
+  targetRotX = 0.15 * Math.cos(time * 0.5) - mouseY * 0.4;
+
+  rootGroup.rotation.y += (targetRotY - rootGroup.rotation.y) * 0.05;
+  rootGroup.rotation.x += (targetRotX - rootGroup.rotation.x) * 0.05;
+  rootGroup.position.y = Math.sin(time * 1.2) * 0.06;
+
+  // Pulse particles
+  pMat.size = 0.04 + Math.sin(time * 3) * 0.015;
+
+  renderer.render(scene, camera);
+}
+animate();
+
+})();
+</script>
+</div>
+<!-- STITCH_THREEJS_END:ANIMATION_2 -->
+<!-- Organic Floating Badges around 3D -->
+<div class="absolute bottom-3 left-3 z-20 px-3 py-1.5 rounded-xl glass-panel text-[11px] font-bold text-emeraldDark shadow-sm flex items-center gap-2">
+<i class="fa-solid fa-seedling text-celadon"></i>
+<span>Tirik Biomodul #348</span>
+</div>
+<div class="absolute top-12 right-3 z-20 px-2.5 py-1 rounded-xl bg-limeGlow/90 text-[10px] font-black text-emeraldDark shadow-sm uppercase tracking-wider">
+                Bioluminescent 99.4%
+              </div>
+</div>
+<div class="px-3 pt-2 text-[11px] text-center text-emeraldDark/70 font-medium">
+              Ekotizimning barqaror rivojlanishi — har bir o‘quvchi ekkan birinchi niholdan unib chiqadi.
+            </div>
+</div>
+</div>
+</div>
+</section>
+<!-- SLIDE 2: AMALIY TAJRIBA — "348-MAKTAB: YASHIL LABORATORIYA" -->
+<section class="slide-section flex-col justify-center" id="slide-1">
+<div class="space-y-6 w-full">
+<!-- Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-sage/30 pb-5">
+<div>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-spearmint border border-celadon/30 text-xs font-bold uppercase tracking-wider text-emeraldDark mb-2">
+<i class="fa-solid fa-microscope text-celadon"></i> 02. Amaliy Tajriba
+            </div>
+<h2 class="font-display text-3xl sm:text-4xl font-extrabold text-emeraldDark tracking-tight">
+              348-maktab: <span class="text-celadon">Yashil Laboratoriya</span>
+</h2>
+<p class="text-sm sm:text-base text-emeraldDark/75 font-medium mt-1">
+              Quruq hisobotlar emas, balki maktab devorlari ichida allaqachon amalga oshgan haqiqiy natijalar.
+            </p>
+</div>
+<div class="flex items-center gap-2 bg-white/70 px-4 py-2 rounded-xl border border-sage/40 shadow-sm">
+<span class="text-xs font-bold text-emeraldDark">Bosh tamoyil:</span>
+<span class="text-xs font-black px-2 py-0.5 rounded bg-limeGlow text-emeraldDark uppercase tracking-wider">Nazariya Emas — Real Natijalar</span>
+</div>
+</div>
+<!-- 4-element Bento-Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-5">
+<!-- Card 1: Yashil Sinflar & Fitodizayn (Span 7) -->
+<div class="md:col-span-7 glass-panel rounded-3xl p-6 sm:p-7 shadow-glass magnetic-card flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -right-8 -bottom-8 w-44 h-44 rounded-full bg-celadon/10 blur-2xl group-hover:scale-125 transition-transform duration-500"></div>
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 rounded-2xl bg-spearmint flex items-center justify-center text-celadon text-xl shadow-sm border border-sage/40">
+<i class="fa-solid fa-leaf"></i>
+</div>
+<span class="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-emeraldDark/5 text-emeraldDark">Fitodizayn</span>
+</div>
+<h3 class="font-display text-2xl font-black text-emeraldDark mb-2">Yashil Sinflar &amp; Fitodizayn</h3>
+<p class="text-sm text-emeraldDark/80 leading-relaxed font-normal">
+                Har bir sinf xonasida o‘quvchilar tomonidan mustaqil parvarishlanadigan mikro-o‘simliklar va tabiiy havo tozalovchi vertikal fitodevorlar tashkil etildi. Har bir o‘quvchi o‘z shaxsiy niholiga ega.
+              </p>
+</div>
+<div class="mt-6 pt-4 border-t border-sage/30 flex items-center justify-between text-xs font-semibold text-celadon">
+<span class="flex items-center gap-1.5"><i class="fa-solid fa-check-circle"></i> 100% Sinflar qamrovi</span>
+<span class="text-emeraldDark/60 font-medium">Kislorod darajasi +28%</span>
+</div>
+</div>
+<!-- Card 2: Eko-Valyuta Tizimi (Span 5) -->
+<div class="md:col-span-5 glass-panel rounded-3xl p-6 sm:p-7 shadow-glass magnetic-card flex flex-col justify-between relative overflow-hidden group bg-gradient-to-br from-white/80 to-spearmint/40">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 rounded-2xl bg-limeGlow/30 flex items-center justify-center text-emeraldDark text-xl shadow-sm border border-limeGlow/50">
+<i class="fa-solid fa-coins"></i>
+</div>
+<span class="text-xs font-black uppercase tracking-widest px-3 py-1 rounded-full bg-limeGlow text-emeraldDark shadow-sm">Eco-Coins</span>
+</div>
+<h3 class="font-display text-2xl font-black text-emeraldDark mb-2">Eko-Valyuta Tizimi</h3>
+<p class="text-sm text-emeraldDark/80 leading-relaxed font-normal">
+                Qayta ishlanadigan qog‘oz va plastik topshirgan o‘quvchilarga maktab ichki eko-ballari berilib, kitoblar, eko-aksessuarlar va rag‘batlantiruvchi sovg‘alarga almashtirildi.
+              </p>
+</div>
+<div class="mt-6 pt-4 border-t border-sage/30 flex items-center justify-between text-xs font-bold text-emeraldDark">
+<span>Saralangan xomashyo:</span>
+<span class="text-celadon font-black text-sm">1.8 Tonik Qayta Ishlash</span>
+</div>
+</div>
+<!-- Card 3: Ochiq Osmon Ostida Ta'lim (Span 5) -->
+<div class="md:col-span-5 glass-panel rounded-3xl p-6 sm:p-7 shadow-glass magnetic-card flex flex-col justify-between relative overflow-hidden group">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 rounded-2xl bg-spearmint flex items-center justify-center text-celadon text-xl shadow-sm border border-sage/40">
+<i class="fa-solid fa-sun-plant-wilt"></i>
+</div>
+<span class="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-emeraldDark/5 text-emeraldDark">Interaktiv Metod</span>
+</div>
+<h3 class="font-display text-2xl font-black text-emeraldDark mb-2">Ochiq Osmon Ostida Ta'lim</h3>
+<p class="text-sm text-emeraldDark/80 leading-relaxed font-normal">
+                Darslar faqat to‘rt devor ichida emas! Tabiat qo‘ynida o‘tkazilgan interaktiv eko-breynringlar, amaliy botannika tajribalari va yoshlarning shaxsiy eko-loyihalari ochiq osmon ostida namoyish etildi.
+              </p>
+</div>
+<div class="mt-6 pt-4 border-t border-sage/30 flex items-center justify-between text-xs font-semibold text-emeraldDark/70">
+<span>O‘tkazilgan ochiq darslar:</span>
+<span class="text-emeraldDark font-bold">42+ ta amaliy sessiya</span>
+</div>
+</div>
+<!-- Card 4: Statistika & O'sish (Span 7) -->
+<div class="md:col-span-7 glass-panel-dark rounded-3xl p-6 sm:p-7 shadow-glass magnetic-card text-white flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -right-12 -top-12 w-56 h-56 rounded-full bg-limeGlow/15 blur-3xl"></div>
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="px-3 py-1 rounded-full bg-limeGlow text-emeraldDark font-black text-xs uppercase tracking-widest shadow-glow-lime">
+                  Trend &amp; O'sish Ko'rsatkichi
+                </span>
+<span class="text-xs text-sage font-medium">348-maktab ichki auditi</span>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-baseline gap-4 mb-3">
+<div class="font-display text-5xl sm:text-6xl font-black text-limeGlow tracking-tight">3X</div>
+<div class="text-lg font-bold text-spearmint">O‘quvchilarning ekologik loyihalardagi faol ishtiroki 3 barobarga oshirildi</div>
+</div>
+<p class="text-xs sm:text-sm text-sage/80 leading-relaxed font-light">
+                Passiv eshituvchilar emas — o‘z tashabbusini ilgari suruvchi, o‘z sinfi va mahallasi uchun qayg‘uruvchi yosh ekologlar jamoasi shakllandi.
+              </p>
+</div>
+<div class="mt-6 pt-4 border-t border-white/10 grid grid-cols-3 gap-2 text-center">
+<div class="bg-white/5 p-2 rounded-xl">
+<div class="font-display text-xl font-bold text-white">850+</div>
+<div class="text-[10px] text-sage/70 uppercase">Ishtirokchi</div>
+</div>
+<div class="bg-white/5 p-2 rounded-xl">
+<div class="font-display text-xl font-bold text-limeGlow">1,200+</div>
+<div class="text-[10px] text-sage/70 uppercase">Ekilgan Nihol</div>
+</div>
+<div class="bg-white/5 p-2 rounded-xl">
+<div class="font-display text-xl font-bold text-white">100%</div>
+<div class="text-[10px] text-sage/70 uppercase">Doimiy Nazorat</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SLIDE 3: STRATEGIK O'ZGARISH — "BEKTEMIR TUMANI: EKO-INQILOB" -->
+<section class="slide-section flex-col justify-center" id="slide-2">
+<div class="space-y-6 w-full">
+<!-- Header -->
+<div class="text-center max-w-3xl mx-auto space-y-2">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-spearmint border border-celadon/30 text-xs font-bold uppercase tracking-wider text-emeraldDark">
+<i class="fa-solid fa-compass text-celadon"></i> 03. Strategik O'zgarish
+          </div>
+<h2 class="font-display text-3xl sm:text-4xl font-black text-emeraldDark tracking-tight">
+            Agar men Bektemir tumani <span class="text-celadon">Ekologiya Koordinatori</span> bo‘lsam...
+          </h2>
+<p class="text-sm sm:text-base text-emeraldDark/75 font-medium">
+            Eski majburiy usullardan voz kechib, ilhom va motivatsiyaga asoslangan zamonaviy tuman ekotizimini quramiz.
+          </p>
+</div>
+<!-- Dynamic Split Comparison -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
+<!-- Left: Kechagi Majburiyat (Eski Stereotip) -->
+<div class="glass-panel-subtle rounded-3xl p-7 sm:p-8 border border-red-200/50 flex flex-col justify-between relative overflow-hidden bg-red-50/20">
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="px-3.5 py-1 rounded-full bg-red-100 text-red-800 text-xs font-black uppercase tracking-wider">
+<i class="fa-solid fa-times-circle mr-1"></i> Kechagi Majburiyat
+                </span>
+<span class="text-xs text-red-700/60 font-semibold">Eski usul</span>
+</div>
+<h3 class="font-display text-2xl font-bold text-emeraldDark/80">Eski Stereotiplar va Formalizm</h3>
+<ul class="space-y-3.5 text-sm text-emeraldDark/70">
+<li class="flex items-start gap-3">
+<div class="w-6 h-6 rounded-full bg-red-100 text-red-600 flex items-center justify-center shrink-0 mt-0.5">
+<i class="fa-solid fa-ban text-xs"></i>
+</div>
+<span><strong>Zerikarli majburiy xasharlar:</strong> Yoshlarda tabiatga sevgi o‘rniga majburiyat hissiyotini keltirib chiqaradigan bir xil tadbirlar.</span>
+</li>
+<li class="flex items-start gap-3">
+<div class="w-6 h-6 rounded-full bg-red-100 text-red-600 flex items-center justify-center shrink-0 mt-0.5">
+<i class="fa-solid fa-ban text-xs"></i>
+</div>
+<span><strong>Burchakda qolib ketuvchi devoriy gazetalar:</strong> Hech kim o‘qimaydigan, formal qog‘oz sarfi va samarasiz tashviqot.</span>
+</li>
+<li class="flex items-start gap-3">
+<div class="w-6 h-6 rounded-full bg-red-100 text-red-600 flex items-center justify-center shrink-0 mt-0.5">
+<i class="fa-solid fa-ban text-xs"></i>
+</div>
+<span><strong>Faqat hisobot uchun ekilgan daraxtlar:</strong> Rasmga tushib bo‘lingach, keyingi kuni suvsiz qurib qoladigan ko‘chatlar.</span>
+</li>
+</ul>
+</div>
+<div class="mt-6 pt-4 border-t border-red-200/40 text-xs text-red-800/80 font-medium italic">
+              Natija: O‘quvchilarda qiziqish so‘nishi va faollikning pasayishi.
+            </div>
+</div>
+<!-- Right: Ertangi Ilhom (Luminous Matcha Glass Card) -->
+<div class="glass-panel rounded-3xl p-7 sm:p-8 border-2 border-celadon shadow-glass flex flex-col justify-between relative overflow-hidden bg-gradient-to-br from-white/95 via-spearmint/40 to-white/90">
+<div class="absolute -right-10 -bottom-10 w-60 h-60 rounded-full bg-limeGlow/25 blur-3xl pointer-events-none"></div>
+<div class="space-y-5">
+<div class="flex items-center justify-between">
+<span class="px-3.5 py-1 rounded-full bg-celadon text-white text-xs font-black uppercase tracking-wider shadow-sm flex items-center gap-1.5">
+<i class="fa-solid fa-sparkles"></i> Ertangi Ilhom
+                </span>
+<span class="text-xs font-black px-2.5 py-0.5 rounded-full bg-limeGlow text-emeraldDark">BEKTEMIR YASHIL HUBI</span>
+</div>
+<h3 class="font-display text-2xl font-black text-emeraldDark">Innovatsion Tuman Ekotizimi</h3>
+<div class="space-y-4">
+<!-- Feature 1 -->
+<div class="p-4 rounded-2xl bg-white/80 border border-sage/40 shadow-sm flex items-start gap-3.5">
+<div class="w-10 h-10 rounded-xl bg-celadon text-white flex items-center justify-center shrink-0 font-bold">
+<i class="fa-solid fa-trophy text-sm"></i>
+</div>
+<div>
+<h4 class="font-display font-bold text-base text-emeraldDark">«Eng Yashil Maktab» Doimiy Jonli Reytingi</h4>
+<p class="text-xs text-emeraldDark/80 leading-relaxed mt-0.5">
+                      Raqamli platforma orqali har bir maktabning haqiqiy yashillik darajasi, saralangan chiqindisi va unib chiqqan daraxtlari reytingi yuritiladi. G‘oliblarga tuman granti beriladi.
+                    </p>
+</div>
+</div>
+<!-- Feature 2 -->
+<div class="p-4 rounded-2xl bg-white/80 border border-sage/40 shadow-sm flex items-start gap-3.5">
+<div class="w-10 h-10 rounded-xl bg-emeraldDark text-limeGlow flex items-center justify-center shrink-0 font-bold">
+<i class="fa-solid fa-network-wired text-sm"></i>
+</div>
+<div>
+<h4 class="font-display font-bold text-base text-emeraldDark">Maktablararo Eko-Klaster</h4>
+<p class="text-xs text-emeraldDark/80 leading-relaxed mt-0.5">
+                      Barcha bir xil ish qilmaydi! Bir maktab kompost tayyorlashga, boshqasi fitobar va dorivor o‘tlarga, uchinchisi esa gidroponika yoki quyosh energiyasiga ixtisoslashadi va o‘zaro tajriba almashadi.
+                    </p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-sage/40 flex items-center justify-between text-xs font-bold text-emeraldDark">
+<span class="flex items-center gap-1.5 text-celadon"><i class="fa-solid fa-arrow-trend-up"></i> Natija: O‘zini o‘zi boshqaruvchi ekotizim</span>
+<span class="bg-limeGlow px-2 py-0.5 rounded text-[11px]">100% Barqaror</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SLIDE 4: QIZLAR UCHUN LOYIHALAR — "ECO-CHIC: BARQAROR GO'ZALLIK VA IJOD" -->
+<section class="slide-section flex-col justify-center" id="slide-3">
+<div class="space-y-6 w-full">
+<!-- Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-sage/30 pb-5">
+<div>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-pink-50 border border-pink-200 text-xs font-bold uppercase tracking-wider text-emeraldDark mb-2">
+<i class="fa-solid fa-wand-magic-sparkles text-pink-500"></i> 04. Qizlar Uchun Tashabbuslar
+            </div>
+<h2 class="font-display text-3xl sm:text-4xl font-extrabold text-emeraldDark tracking-tight">
+              Eco-Chic: <span class="text-celadon font-serif italic">Barqaror Go‘zallik va Ijod</span>
+</h2>
+<p class="text-sm sm:text-base text-emeraldDark/75 font-medium mt-1">
+              Yashil Turmush Madaniyati: Ijod, Estetika va Zero-Waste falsafasini uyg‘unlashtirish.
+            </p>
+</div>
+<div class="text-xs font-bold px-3 py-1.5 rounded-xl bg-white border border-sage/40 shadow-sm text-emeraldDark flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-pink-400"></span>
+            Ayollar va qizlar ekologik yetakchiligi
+          </div>
+</div>
+<!-- 3 Botanic Illustration Glass Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="glass-panel rounded-3xl p-6 shadow-glass magnetic-card flex flex-col justify-between border-t-4 border-t-pink-400">
+<div>
+<div class="w-12 h-12 rounded-2xl bg-pink-100/60 flex items-center justify-center text-pink-600 text-xl mb-4 shadow-sm">
+<i class="fa-solid fa-vest-patches"></i>
+</div>
+<span class="text-[11px] font-bold uppercase tracking-wider text-pink-600 bg-pink-50 px-2.5 py-0.5 rounded-md">Moda &amp; Qayta Ishlash</span>
+<h3 class="font-display text-xl font-black text-emeraldDark mt-2 mb-2">Upcycling &amp; Eco-Fashion Fest</h3>
+<p class="text-xs sm:text-sm text-emeraldDark/80 leading-relaxed">
+                Chiqindi matolar, eski kiyimlar va ekologik toza qadoqlardan zamonaviy aksessuarlar, o‘quvchi shoperlari va milliy bezakli eko-liboslar yaratish bo‘yicha tuman ko‘rgazmasi va modalar namoyishi.
+              </p>
+</div>
+<div class="mt-6 pt-4 border-t border-sage/30 flex items-center justify-between text-xs font-semibold text-emeraldDark/70">
+<span>Amaliy natija:</span>
+<span class="text-pink-600 font-bold">Tekstil chiqindisini -40% kamaytirish</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="glass-panel rounded-3xl p-6 shadow-glass magnetic-card flex flex-col justify-between border-t-4 border-t-celadon bg-gradient-to-b from-white/80 to-spearmint/30">
+<div>
+<div class="w-12 h-12 rounded-2xl bg-spearmint flex items-center justify-center text-celadon text-xl mb-4 shadow-sm border border-sage/40">
+<i class="fa-solid fa-mortar-pestle"></i>
+</div>
+<span class="text-[11px] font-bold uppercase tracking-wider text-celadon bg-white px-2.5 py-0.5 rounded-md border border-sage/40">Fitoterapiya &amp; Tabiat</span>
+<h3 class="font-display text-xl font-black text-emeraldDark mt-2 mb-2">Organik Go‘zallik va Fitobar</h3>
+<p class="text-xs sm:text-sm text-emeraldDark/80 leading-relaxed">
+                Qizlar bilan dorivor o‘simliklar (yalpiz, lavanda, moychechak, rayhon) yetishtirish. Ulardan tabiiy aromatik choylar, efir moylari va organik sovunlar tayyorlash masterklasslari hamda maktab fitobarlari.
+              </p>
+</div>
+<div class="mt-6 pt-4 border-t border-sage/30 flex items-center justify-between text-xs font-semibold text-emeraldDark/70">
+<span>Amaliy natija:</span>
+<span class="text-celadon font-bold">Har maktabda 1 tadan Fitobar</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="glass-panel rounded-3xl p-6 shadow-glass magnetic-card flex flex-col justify-between border-t-4 border-t-emeraldDark">
+<div>
+<div class="w-12 h-12 rounded-2xl bg-emeraldDark/10 flex items-center justify-center text-emeraldDark text-xl mb-4 shadow-sm">
+<i class="fa-solid fa-recycle"></i>
+</div>
+<span class="text-[11px] font-bold uppercase tracking-wider text-emeraldDark bg-white px-2.5 py-0.5 rounded-md border border-sage/40">Oila &amp; Turmush</span>
+<h3 class="font-display text-xl font-black text-emeraldDark mt-2 mb-2">Zero-Waste Lifestyle</h3>
+<p class="text-xs sm:text-sm text-emeraldDark/80 leading-relaxed">
+                Oila va oshxona byudjetini tejaydigan, bir marta ishlatiladigan vositalarsiz yashash madaniyati bo‘yicha mini-pitchinglar. Maktab oshxonalarida bir martalik plastik idishlarni to‘liq yo‘qotish loyihasi.
+              </p>
+</div>
+<div class="mt-6 pt-4 border-t border-sage/30 flex items-center justify-between text-xs font-semibold text-emeraldDark/70">
+<span>Amaliy natija:</span>
+<span class="text-emeraldDark font-bold">Chiqindisiz xonadon madaniyati</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SLIDE 5: O'G'IL BOLALAR UCHUN LOYIHALAR — "GREENTECH & EKO-KIBERINTELLEKT" -->
+<section class="slide-section flex-col justify-center" id="slide-4">
+<div class="space-y-6 w-full">
+<!-- Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-sage/30 pb-5">
+<div>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emeraldDark/10 border border-emeraldDark/20 text-xs font-bold uppercase tracking-wider text-emeraldDark mb-2">
+<i class="fa-solid fa-microchip text-celadon"></i> 05. O'g'il Bolalar &amp; GreenTech
+            </div>
+<h2 class="font-display text-3xl sm:text-4xl font-extrabold text-emeraldDark tracking-tight">
+              Kelajak Muhandislari: <span class="text-celadon">Tabiatni Texnologiya Bilan Boshqarish</span>
+</h2>
+<p class="text-sm sm:text-base text-emeraldDark/75 font-medium mt-1">
+              GreenTech, IoT datchiklari, quyosh panellari va kiber-intellekt orqali ekologiyani avtomatlashtirish.
+            </p>
+</div>
+<div class="text-xs font-mono font-bold px-3 py-1.5 rounded-xl bg-emeraldDark text-limeGlow shadow-sm flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-limeGlow animate-pulse"></span>
+            SYS: GreenTech 2025 ACTIVE
+          </div>
+</div>
+<!-- High-tech dark-sage & glowing neon glass cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Card 1: Aqlli Issiqxona -->
+<div class="glass-panel-dark rounded-3xl p-6 shadow-glass magnetic-card text-white flex flex-col justify-between relative overflow-hidden border border-emeraldDark/40">
+<div class="absolute -right-10 -bottom-10 w-40 h-40 bg-limeGlow/10 rounded-full blur-2xl"></div>
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-limeGlow text-xl">
+<i class="fa-solid fa-temperature-arrow-up"></i>
+</div>
+<span class="text-[11px] font-mono text-limeGlow bg-limeGlow/10 px-2.5 py-0.5 rounded border border-limeGlow/30">IoT &amp; Arduino</span>
+</div>
+<h3 class="font-display text-xl font-black text-white mb-2">Aqlli Eko-Issiqxona</h3>
+<p class="text-xs sm:text-sm text-sage/80 leading-relaxed font-light">
+                Maktab hududlaridagi nihollar va o‘simliklarni tuproq namligi, havo harorati va yorug‘lik sensorlari orqali inson aralashuvisiz avtomatik sug‘oradigan robotlashtirilgan tizimlar musobaqasi.
+              </p>
+</div>
+<div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-sage">
+<span>Sensorlar:</span>
+<span class="font-mono text-limeGlow font-bold">Avtomatlashtirilgan Sug‘orish</span>
+</div>
+</div>
+<!-- Card 2: Cyber-Eco Game Jam -->
+<div class="glass-panel-dark rounded-3xl p-6 shadow-glass magnetic-card text-white flex flex-col justify-between relative overflow-hidden border border-celadon/40">
+<div class="absolute -right-10 -bottom-10 w-40 h-40 bg-celadon/20 rounded-full blur-2xl"></div>
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-celadon text-xl">
+<i class="fa-solid fa-gamepad"></i>
+</div>
+<span class="text-[11px] font-mono text-white bg-celadon/30 px-2.5 py-0.5 rounded border border-celadon/40">GameDev Xakaton</span>
+</div>
+<h3 class="font-display text-xl font-black text-white mb-2">Cyber-Eco Game Jam</h3>
+<p class="text-xs sm:text-sm text-sage/80 leading-relaxed font-light">
+                Bolalarning kompyuter o‘yinlariga bo‘lgan qiziqishini ekologiyaga buramiz! Shahar tozaligi, chiqindilarni to‘g‘ri saralash va energiya tejashga bag‘ishlangan mini-o‘yinlar va dasturlar yaratish xakatoni.
+              </p>
+</div>
+<div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-sage">
+<span>Auditoriya:</span>
+<span class="font-mono text-white font-bold">1,000+ Yosh O‘yinchi</span>
+</div>
+</div>
+<!-- Card 3: Quyosh Energiyasi & Dronlar -->
+<div class="glass-panel-dark rounded-3xl p-6 shadow-glass magnetic-card text-white flex flex-col justify-between relative overflow-hidden border border-limeGlow/30">
+<div class="absolute -right-10 -bottom-10 w-40 h-40 bg-limeGlow/15 rounded-full blur-2xl"></div>
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-limeGlow text-xl">
+<i class="fa-solid fa-solar-panel"></i>
+</div>
+<span class="text-[11px] font-mono text-limeGlow bg-limeGlow/10 px-2.5 py-0.5 rounded border border-limeGlow/30">Monitoring &amp; Dronlar</span>
+</div>
+<h3 class="font-display text-xl font-black text-white mb-2">Quyosh Energiyasi &amp; Dronlar</h3>
+<p class="text-xs sm:text-sm text-sage/80 leading-relaxed font-light">
+                Maktab tomlarida quyosh panellari maketlarini qurish va tuman hududidagi noqonuniy chiqindixonalar va havo ifloslanishini datchikli mini-dronlar bilan xaritalashtirish bo‘yicha yosh muhandislar patruli.
+              </p>
+</div>
+<div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-sage">
+<span>Kameralar va datchiklar:</span>
+<span class="font-mono text-limeGlow font-bold">Tuman Eko-Monitoringi</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SLIDE 6: TUMAN MIQYOSIDAGI UMUMIY TASHABBUS — "YASHIL TARMOQ" -->
+<section class="slide-section flex-col justify-center" id="slide-5">
+<div class="space-y-6 w-full">
+<!-- Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-sage/30 pb-5">
+<div>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-spearmint border border-celadon/30 text-xs font-bold uppercase tracking-wider text-emeraldDark mb-2">
+<i class="fa-solid fa-diagram-project text-celadon"></i> 06. Tuman Miqyosidagi Loyiha
+            </div>
+<h2 class="font-display text-3xl sm:text-4xl font-extrabold text-emeraldDark tracking-tight">
+              Tuman Maktablari Hamkorligi: <span class="text-celadon">«Yashil Tarmoq»</span>
+</h2>
+<p class="text-sm sm:text-base text-emeraldDark/75 font-medium mt-1">
+              Raqobatsiz ekotizim: Bektemir tumanidagi barcha maktablar bir-biri bilan uzviy zanjir hosil qiladi.
+            </p>
+</div>
+<div class="text-xs font-bold px-3 py-1.5 rounded-xl bg-white border border-sage/40 shadow-sm text-emeraldDark">
+            3-Bosqichli Gorizontal Sinergiya
+          </div>
+</div>
+<!-- 3-bosqichli gorizontal interaktiv zanjir (Timeline flow) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+<!-- Step 1 -->
+<div class="glass-panel rounded-3xl p-6 sm:p-7 shadow-glass magnetic-card flex flex-col justify-between relative overflow-hidden group">
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<div class="w-12 h-12 rounded-2xl bg-emeraldDark text-limeGlow flex items-center justify-center font-display font-black text-xl shadow-md">
+                  01
+                </div>
+<span class="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-spearmint text-emeraldDark">Xomashyo</span>
+</div>
+<h3 class="font-display text-2xl font-black text-emeraldDark">«Chiqindidan — Resursga»</h3>
+<p class="text-sm text-emeraldDark/80 leading-relaxed font-normal">
+                Tuman bo‘ylab barcha maktablarda yig‘ilgan plastik qopqoqlar va qayta ishlanadigan materiallardan maxsus termo-press yordamida maktab hovlilari uchun zamonaviy eko-o‘rindiqlar va yo‘l belgilari yasaladi.
+              </p>
+</div>
+<div class="mt-6 pt-4 border-t border-sage/30 flex items-center gap-2 text-xs font-bold text-celadon">
+<i class="fa-solid fa-chair"></i>
+<span>O‘zbekistonda ilk maktab eko-mebellari</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="glass-panel rounded-3xl p-6 sm:p-7 shadow-glass magnetic-card flex flex-col justify-between relative overflow-hidden group bg-gradient-to-b from-white/90 to-spearmint/40 border-2 border-celadon">
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<div class="w-12 h-12 rounded-2xl bg-celadon text-white flex items-center justify-center font-display font-black text-xl shadow-md">
+                  02
+                </div>
+<span class="text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full bg-limeGlow text-emeraldDark">Avlodlar Bog‘i</span>
+</div>
+<h3 class="font-display text-2xl font-black text-emeraldDark">«Yashil Mentorlik» Dasturi</h3>
+<p class="text-sm text-emeraldDark/80 leading-relaxed font-normal">
+                Katta sinf (9-11 sinf) liderlari 1-4 sinf boshlang‘ich maktab bolalariga shaxsiy nihol parvarishlash, tuproq turlari va tabiatni sevish bo‘yicha amaliy darslar o‘tadi. Har bir bitiruvchi o‘z izdoshiga nihol topshiradi.
+              </p>
+</div>
+<div class="mt-6 pt-4 border-t border-sage/30 flex items-center gap-2 text-xs font-bold text-emeraldDark">
+<i class="fa-solid fa-hands-holding-child text-celadon"></i>
+<span>Uzluksiz ekologik tarbiya zanjiri</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="glass-panel rounded-3xl p-6 sm:p-7 shadow-glass magnetic-card flex flex-col justify-between relative overflow-hidden group">
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<div class="w-12 h-12 rounded-2xl bg-emeraldDark text-white flex items-center justify-center font-display font-black text-xl shadow-md">
+                  03
+                </div>
+<span class="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-spearmint text-emeraldDark">Katta Forum</span>
+</div>
+<h3 class="font-display text-2xl font-black text-emeraldDark">Yillik Bektemir Eko-Forumi</h3>
+<p class="text-sm text-emeraldDark/80 leading-relaxed font-normal">
+                Yil yakunida tumanning barcha 15+ umumta’lim maktablari o‘zlarining eko-ixtirolari, mahsulotlari va startaplarini tuman hokimligi, xalqaro ekspertlar va investorlarga taqdim etadi. Eng yaxshi maktabga "Yashil Grant" taqdim etiladi.
+              </p>
+</div>
+<div class="mt-6 pt-4 border-t border-sage/30 flex items-center gap-2 text-xs font-bold text-celadon">
+<i class="fa-solid fa-award"></i>
+<span>Yillik Tuman Yashil Chempionati</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SLIDE 7: BOSH MANIFEST VA CHAQIRIQ (FINALE) -->
+<section class="slide-section flex-col justify-center" id="slide-6">
+<div class="max-w-4xl mx-auto w-full text-center space-y-8">
+<!-- Ambient Glowing Aura -->
+<div class="relative inline-block">
+<div class="absolute -inset-4 rounded-full bg-limeGlow/30 blur-2xl animate-pulse"></div>
+<div class="relative inline-flex items-center gap-2 px-5 py-2 rounded-full glass-panel border border-celadon/40 shadow-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-celadon"></span>
+<span class="text-xs font-extrabold uppercase tracking-widest text-emeraldDark">07. Bosh Manifest &amp; Kelajakka Qadam</span>
+</div>
+</div>
+<!-- Grand Manifesto Quote -->
+<div class="glass-panel rounded-3xl p-8 sm:p-12 shadow-glass border-2 border-sage/50 relative overflow-hidden bg-white/75 backdrop-blur-xl">
+<div class="text-celadon text-4xl mb-4 font-serif italic">“</div>
+<p class="font-display text-2xl sm:text-3xl lg:text-4xl font-extrabold text-emeraldDark leading-relaxed tracking-tight">
+            «Biz tabiatni ota-bobolarimizdan meros qilib olganimiz yo‘q — biz uni kelajak avloddan qarzga olganmiz.
+            Bektemir tumani yoshlarini ekologiyani shunchaki sevishga emas, uni eng ilg‘or ilm va texnologiyalar bilan asrashga chaqiraman!»
+          </p>
+<div class="mt-6 flex flex-col items-center justify-center">
+<div class="w-12 h-1 bg-celadon rounded-full mb-3"></div>
+<div class="font-display font-black text-lg text-emeraldDark">Abdukarimova Muborak</div>
+<div class="text-xs text-celadon font-semibold uppercase tracking-wider">348-maktab Yashil Harakat Lideri | Bektemir Tumani</div>
+</div>
+</div>
+<!-- Big Call to Action -->
+<div class="space-y-4">
+<h3 class="font-display text-3xl sm:text-4xl font-black text-emeraldDark">
+            Birgalikda yashilroq, tolaroq va aqlliroq kelajak sari!
+          </h3>
+<div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+<button class="px-8 py-4 rounded-2xl bg-emeraldDark text-white font-display font-bold text-base shadow-glow-green hover:bg-celadon transition-all flex items-center gap-3" onclick="goToSlide(0)">
+<i class="fa-solid fa-rotate-left text-sm"></i>
+<span>Boshidan Ko‘rish</span>
+</button>
+<button class="px-8 py-4 rounded-2xl glass-panel text-emeraldDark font-display font-bold text-base border border-sage/50 hover:bg-white transition-all flex items-center gap-3 shadow-sm" onclick="goToSlide(2)">
+<i class="fa-solid fa-list-check text-celadon"></i>
+<span>Bektemir Strategiyasini Ko‘rish</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- PERSISTENT FOOTER BAR (INTERACTIVE CONTROLS) -->
+<footer class="relative z-20 px-6 py-4">
+<div class="max-w-7xl mx-auto glass-panel-subtle rounded-2xl px-6 py-3 flex items-center justify-between shadow-sm border border-sage/30">
+<div class="text-xs font-semibold text-emeraldDark/70 flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-celadon inline-block"></span>
+<span>«Ekologiya 2.0» Innovatsion Taqdimot Platformasi</span>
+</div>
+<!-- Arrow Navigation with Key Hints -->
+<div class="flex items-center gap-3">
+<button class="px-3.5 py-1.5 rounded-xl bg-white/80 hover:bg-white text-emeraldDark font-bold text-xs border border-sage/40 transition-all flex items-center gap-2 shadow-sm" onclick="prevSlide()">
+<i class="fa-solid fa-arrow-left"></i>
+<span class="hidden sm:inline">Oldingi (←)</span>
+</button>
+<div class="flex items-center gap-1" id="dotsContainer">
+<!-- Dots injected via JS -->
+</div>
+<button class="px-3.5 py-1.5 rounded-xl bg-emeraldDark hover:bg-celadon text-white font-bold text-xs transition-all flex items-center gap-2 shadow-sm" onclick="nextSlide()">
+<span class="hidden sm:inline">Keyingi (→)</span>
+<i class="fa-solid fa-arrow-right"></i>
+</button>
+</div>
+<div class="hidden md:flex items-center gap-2 text-xs font-bold text-emeraldDark/60">
+<span>Toshkent shahri, Bektemir tumani</span>
+</div>
+</div>
+</footer>
+<!-- PRESENTATION LOGIC JAVASCRIPT -->
+<script>
+    const totalSlides = 7;
+    let currentSlide = 0;
+
+    const slideTitles = [
+      "1. Hero Cover",
+      "2. 348-maktab Lab",
+      "3. Bektemir Strategiya",
+      "4. Eco-Chic (Qizlar)",
+      "5. GreenTech (O'g'illar)",
+      "6. Yashil Tarmoq",
+      "7. Bosh Manifest"
+    ];
+
+    function updatePresentationUI() {
+      // Show only active slide
+      for (let i = 0; i < totalSlides; i++) {
+        const slide = document.getElementById(`slide-${i}`);
+        if (slide) {
+          if (i === currentSlide) {
+            slide.classList.add('active');
+          } else {
+            slide.classList.remove('active');
+          }
+        }
+      }
+
+      // Update Nav Tabs
+      document.querySelectorAll('.nav-tab').forEach((tab, index) => {
+        if (index === currentSlide) {
+          tab.classList.add('bg-white', 'text-emeraldDark', 'shadow-sm');
+          tab.classList.remove('text-emeraldDark/70');
+        } else {
+          tab.classList.remove('bg-white', 'text-emeraldDark', 'shadow-sm');
+          tab.classList.add('text-emeraldDark/70');
+        }
+      });
+
+      // Update Slide Counter Text
+      const counter = document.getElementById('slideCounterText');
+      if (counter) {
+        counter.textContent = `Slayd 0${currentSlide + 1} / 07 — ${slideTitles[currentSlide]}`;
+      }
+
+      // Update Fluid Growth Progress Bar
+      const progressBar = document.getElementById('growthProgressBar');
+      if (progressBar) {
+        const percent = ((currentSlide + 1) / totalSlides) * 100;
+        progressBar.style.width = `${percent}%`;
+      }
+
+      // Render Dots
+      const dotsContainer = document.getElementById('dotsContainer');
+      if (dotsContainer) {
+        dotsContainer.innerHTML = '';
+        for (let i = 0; i < totalSlides; i++) {
+          const dot = document.createElement('button');
+          dot.className = `w-2 h-2 rounded-full transition-all ${i === currentSlide ? 'w-6 bg-celadon shadow-sm' : 'bg-emeraldDark/20 hover:bg-emeraldDark/40'}`;
+          dot.onclick = () => goToSlide(i);
+          dot.title = slideTitles[i];
+          dotsContainer.appendChild(dot);
+        }
+      }
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function goToSlide(index) {
+      if (index >= 0 && index < totalSlides) {
+        currentSlide = index;
+        updatePresentationUI();
+      }
+    }
+
+    function nextSlide() {
+      if (currentSlide < totalSlides - 1) {
+        currentSlide++;
+      } else {
+        currentSlide = 0; // loop back to start or stay
+      }
+      updatePresentationUI();
+    }
+
+    function prevSlide() {
+      if (currentSlide > 0) {
+        currentSlide--;
+      } else {
+        currentSlide = totalSlides - 1;
+      }
+      updatePresentationUI();
+    }
+
+    // Keyboard navigation (Left, Right, Space)
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === 'Space') {
+        nextSlide();
+      } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+        prevSlide();
+      }
+    });
+
+    // Initial load
+    updatePresentationUI();
+  </script>
+</body>
+</html>
